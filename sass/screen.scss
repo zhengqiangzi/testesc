@@ -1,0 +1,207 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/layout";
+@import "compass/css3";
+@import 'vaiable.scss';
+@import "flex.scss";
+@import "animation.scss";
+
+
+html{
+	font-size:0.8rem;
+}
+body{
+	margin:0px;
+	background-color:$bg-color;
+	color:#fff;
+	font-size:1.3rem;
+	line-height:1.3rem;
+	background-image:url(../img/bg.jpg);
+	background-size:cover;
+	font-family:'Microsoft YaHei';
+}
+*{
+	box-sizing:border-box;
+	pointer-events:none;
+
+}
+ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+.core{
+	width:100%;
+	@include stretch(0px,0px,0px,0px);
+	@extend .flex-v;
+
+}
+.animation{
+	
+	@include stretch(0px,0px,0px,0px);
+	overflow:hidden;
+
+}
+.header{
+	@extend .flex-h-center-top;
+}
+.footer{
+	@extend .header;
+
+}
+.data{
+	@extend .flex;
+	width:700px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.data-item{
+	@extend .flex-v;
+	@include flex(1);
+	&>*{
+		margin-bottom:10px;
+		&:last-child{
+			margin-bottom:0px;
+		}
+	}
+}
+
+
+
+.data-img{
+	@extend .flex-v-center-center;
+	&>div{
+		width:80%;
+	}
+}
+
+.data-core{
+	height:auto;
+	@extend .flex-v-end-center;
+	height:380px;  
+}
+.data-score{
+	font-size:2rem;
+	line-height:2rem;
+	margin-bottom:5px;
+	background:linear-gradient(135deg,#f5f4b1,#d1a861,#d1a861,#f5f4b1);
+	-webkit-text-fill-color:transparent;
+	font-weight:bolder;
+	-webkit-background-clip:text;
+	font-family:'Arial';
+
+}
+
+.data-name{
+	@extend .flex-v-center-center;
+}
+.data-middle{
+	width:100%;
+	background-image:url(../img/z-m.png);
+	background-repeat:repeat-y;
+	background-position:center center;
+	height:0px;
+	transition:all 0.5s;
+}
+
+
+
+.ys{
+	width:141px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	animation:ys 5s 3s infinite;
+}
+
+
+
+.admin{
+
+	& *{
+		pointer-events:auto !important;
+		outline:0px;
+	}
+
+	width:100%;
+	overflow:hidden;
+}
+
+.controller{
+	@extend .flex;
+	margin-bottom:10px;
+	height:40px;
+	&>.label{
+		width:120px;
+		height:40px;
+		@extend .flex-v-center-center;
+
+	}
+	&>.text{
+		@include flex(1);
+				height:40px;
+
+		&>input{
+			width:100%;
+			background:transparent;
+			border:1px solid rgba(255,255,255,.5);
+			color:#fff;
+			height:40px;
+		}
+	}
+	&>.oldText{
+			width:60px;
+			@extend .flex-h-center-center;
+	}
+}
+.button{
+	width:100%;
+	@extend .flex-h-center-center;
+	&>button{
+		width:120px;
+		height:40px;
+		background-color:#cda058;
+		border:0px;
+		color:#d61717;
+		font-size:1.8rem;
+		cursor:pointer;
+		margin-right:10px;
+	}
+}
+
+.max{
+		@extend .flex;
+		margin-bottom:10px;
+		margin-top:10px;
+		&>label{
+			height:40px;
+			width:120px;
+			@extend .flex-v-center-center;
+		}
+		& input{
+			background:transparent;
+			border:1px solid rgba(255,255,255,.5);
+			color:#fff;
+			height:40px;
+		}
+
+		& .oldMax{
+			@extend .flex-v-center-center;
+			height:40px;
+		}
+
+}

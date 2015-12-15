@@ -1,0 +1,32 @@
+@keyframes ys{
+	
+	from{
+
+		right:0%;
+		top:0px;
+		opacity:1;
+	}
+	to{
+
+		right:100%;
+		top:100%;
+		opacity:0;
+
+	}
+
+}
+
+@keyframes text{
+	from{
+
+		background:linear-gradient(30deg,#f5f4b1,#d1a861,#d1a861);
+	
+	}
+	to{
+
+		background:linear-gradient(30deg,#ff0000,#d1a861,#d1a861);
+
+
+	}
+
+}

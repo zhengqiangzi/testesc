@@ -1,0 +1,40 @@
+@import 'compass/css3';
+
+.flex{
+ 	@include display-flex;
+ }
+ .flex-v{
+ 	@extend .flex;
+ 	@include flex-direction(column);
+ }
+
+.flex-h-center-center{
+	@extend .flex;
+	@include align-items(center);
+	@include justify-content(center);
+}
+.flex-h-start-center{
+	@extend .flex;
+	@include align-items(center);
+	@include justify-content(flex-start);
+}
+
+
+.flex-h-center-top{
+	@extend .flex;
+	@include align-items(flex-start);
+	@include justify-content(center);
+}
+.flex-v-center-center{
+	
+	@extend .flex-v;
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+.flex-v-end-center{
+	
+	@extend .flex-v;
+	@include align-items(center);
+	@include justify-content(flex-end);
+}
